@@ -17,8 +17,24 @@ public class ComplexNum {
         return imaginary;
     }
 
+    public boolean isReal() {
+        return imaginary == 0;
+    }
+
+    public boolean isImaginary() {
+        return real == 0 && imaginary != 0;
+    }
+
+    public boolean isComplex() {
+        return real != 0 && imaginary != 0;
+    }
+
     @Override
     public String toString() {
-        return real + " + " + imaginary + "i";
+        if (imaginary >= 0) {
+            return real + " + " + imaginary + "i";
+        } else {
+            return real + " - " + (-imaginary) + "i";
+        }
     }
 }

@@ -16,4 +16,3 @@ public class Logger {
         System.out.println("Log: " + message);
     }
 }
-
